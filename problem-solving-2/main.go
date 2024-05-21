@@ -55,7 +55,7 @@ func main() {
 	for i := 0; i < n; i++ {
 		inputTillValid("%d", &data[i])
 	}
-	fmt.Printf("%.6f ", fractionOfPositive(data))
-	fmt.Printf("%.6f ", fractionOfNegative(data))
-	fmt.Printf("%.6f", fractionOfZero(data))
+	fmt.Printf("%.6f\n", fractionOfPositive(data))
+	fmt.Printf("%.6f\n", fractionOfNegative(data))
+	fmt.Printf("%.6f\n", fractionOfZero(data))
 }
