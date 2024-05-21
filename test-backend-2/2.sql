@@ -1,0 +1,1 @@
+select count(1) from employees where job_title = 'Manager'

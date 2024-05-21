@@ -1,0 +1,1 @@
+select avg(joined_date) from employees where joined_date > dateadd(year, -5, joined_date)
