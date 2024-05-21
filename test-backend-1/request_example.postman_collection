@@ -1,0 +1,557 @@
+{
+	"info": {
+		"_postman_id": "9c08255e-874e-419a-b01d-3fa5d4eaa56a",
+		"name": "CRM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29533148"
+	},
+	"item": [
+		{
+			"name": "Actor",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"{{$randomUserName}}\",\r\n    \"password\": \"{{$randomPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/actors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"{{$randomUserName}}\",\r\n    \"password\": \"{{$randomPassword}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/actors",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"actors"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Jun 2023 04:58:18 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "123"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"message\": \"Success create actor\",\n    \"data\": {\n        \"username\": \"Dandre13\",\n        \"role\": \"admin\",\n        \"verified\": false,\n        \"active\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/actors/{{actorID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"actors",
+								"{{actorID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/actors/9",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"actors",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Jun 2023 04:58:47 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "130"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Success retrieve data\",\n    \"data\": {\n        \"username\": \"Burdette.Conn98\",\n        \"role\": \"admin\",\n        \"verified\": true,\n        \"active\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"{{$randomUserName}}\",\r\n    \"password\": \"{{$randomPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/actors/{{customerID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"actors",
+								"{{customerID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Update",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"{{$randomUserName}}\",\r\n    \"password\": \"{{$randomPassword}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/actors/4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"actors",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Jun 2023 05:00:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "130"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Success update actor\",\n    \"data\": {\n        \"username\": \"Mikel_Roberts48\",\n        \"role\": \"admin\",\n        \"verified\": false,\n        \"active\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/actors/{{customerID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"actors",
+								"{{customerID}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/actors/16",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"actors",
+										"16"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Jun 2023 05:08:52 GMT"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Change Active Actor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/actors/active",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"actors",
+								"active"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Change Active Actor",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"activate\": [\r\n        \"Rickie35\"\r\n    ],\r\n    \"deactivate\": [\r\n        \"Norene_King\",\r\n        \"Clarabelle79\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/actors/active",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"actors",
+										"active"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Jun 2023 06:03:32 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Activate/Deactivate success\",\n    \"data\": {\n        \"failed\": [\n            \"Norene_King\"\n        ],\n        \"success\": [\n            \"Rickie35\",\n            \"Clarabelle79\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/actors?perpage=0&page=1&username=m",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"actors"
+							],
+							"query": [
+								{
+									"key": "perpage",
+									"value": "0"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "username",
+									"value": "m"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/actors?perpage=10&page=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"actors"
+									],
+									"query": [
+										{
+											"key": "perpage",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "username",
+											"value": "m",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Jun 2023 06:04:59 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "795"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Success retrieve actor\",\n    \"data\": [\n        {\n            \"username\": \"su_admin\",\n            \"role\": \"super_admin\",\n            \"verified\": true,\n            \"active\": true\n        },\n        {\n            \"username\": \"Cary79\",\n            \"role\": \"admin\",\n            \"verified\": false,\n            \"active\": false\n        },\n        {\n            \"username\": \"Elna_Mante\",\n            \"role\": \"admin\",\n            \"verified\": false,\n            \"active\": false\n        },\n        {\n            \"username\": \"Mikel_Roberts48\",\n            \"role\": \"admin\",\n            \"verified\": false,\n            \"active\": false\n        },\n        {\n            \"username\": \"Norene_King\",\n            \"role\": \"admin\",\n            \"verified\": false,\n            \"active\": false\n        },\n        {\n            \"username\": \"Clarabelle79\",\n            \"role\": \"admin\",\n            \"verified\": true,\n            \"active\": false\n        },\n        {\n            \"username\": \"Burdette.Conn98\",\n            \"role\": \"admin\",\n            \"verified\": true,\n            \"active\": false\n        },\n        {\n            \"username\": \"Mike55\",\n            \"role\": \"admin\",\n            \"verified\": false,\n            \"active\": false\n        },\n        {\n            \"username\": \"test_123\",\n            \"role\": \"admin\",\n            \"verified\": true,\n            \"active\": false\n        },\n        {\n            \"username\": \"Deshaun_Langworth42\",\n            \"role\": \"admin\",\n            \"verified\": true,\n            \"active\": true\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"su_admin\",\r\n    \"password\": \"su_admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Jun 2023 04:55:10 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "334"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"message\": \"Authenticated success\",\n    \"data\": {\n        \"token\": \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiUm9sZSI6InN1cGVyX2FkbWluIiwiaXNzIjoibG9jYWxob3N0Iiwic3ViIjoic3VfYWRtaW4iLCJhdWQiOlsibG9jYWxob3N0Il0sImV4cCI6MTY4NjAzMDkxMCwibmJmIjoxNjg2MDI3MzEwLCJpYXQiOjE2ODYwMjczMTB9.YMy_CtXIVrizev0sWauWNxcMwCB1htou5DmHWdcWJ5A\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MTgsIlJvbGUiOiJhZG1pbiIsImlzcyI6ImxvY2FsaG9zdCIsInN1YiI6InN1X2FkbWluIiwiYXVkIjpbImxvY2FsaG9zdCJdLCJleHAiOjE3MTYzMjAwMjQsIm5iZiI6MTcxNjMxNjQyNCwiaWF0IjoxNzE2MzE2NDI0fQ.ms-l1t6UmCQysNAp9qtS5oiH3FNLfEa-hAD70qBbuR0",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "customerID",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "actorID",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
